@@ -58,6 +58,7 @@ async function populateModels() {
         // set up handler for selection
         selectElement.onchange = (() => updateModelInQueryString(selectElement.value));
 
+        selectElement.innerHtml = '';
         data.models.forEach((model) => {
             const option = document.createElement('option');
             option.value = model.name;
